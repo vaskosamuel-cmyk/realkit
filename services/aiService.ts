@@ -7,7 +7,7 @@ const getAiInstance = () => {
   return new GoogleGenAI({ apiKey: process.env.API_KEY });
 };
 
-export const generateRealEstateScript = async (type: ScriptType, context: string, lang: Language = 'en'): Promise<string> => {
+export const generateRealEstateScript = async (type: ScriptType, context: string): Promise<string> => {
   const ai = getAiInstance();
   
   if (!ai) {
@@ -19,7 +19,7 @@ export const generateRealEstateScript = async (type: ScriptType, context: string
       Act as a world-class real estate coach.
       Write a short, punchy, and effective ${type} script for a real estate agent.
       
-      Language: ${lang === 'en' ? 'English' : lang === 'es' ? 'Spanish' : lang === 'de' ? 'German' : 'French'}
+      Language: English
       Context: ${context || "General approach"}.
       
       Rules:
@@ -41,36 +41,42 @@ export const generateRealEstateScript = async (type: ScriptType, context: string
   }
 };
 
-export const translateAppContent = async (content: AppContent, targetLang: Language): Promise<AppContent> => {
+export const translateAppContent = async (content: AppContent, targetLanguage: Language): Promise<AppContent> => {
   const ai = getAiInstance();
-  if (!ai) throw new Error("API Key missing");
-
-  const prompt = `
-    You are a professional localization expert. 
-    Translate the values of the following JSON object into ${targetLang === 'es' ? 'Spanish' : targetLang === 'de' ? 'German' : 'French'}.
-    
-    Rules:
-    1. Keep the JSON structure EXACTLY the same.
-    2. Do NOT translate keys.
-    3. Do NOT translate brand names like "EstateOS", "Notion", "Canva", "Gemini", "ChatGPT".
-    4. Maintain the professional, persuasive marketing tone.
-    5. Return valid JSON.
-
-    Input JSON:
-    ${JSON.stringify(content)}
-  `;
-
-  const response = await ai.models.generateContent({
-    model: 'gemini-2.5-flash',
-    contents: prompt,
-    config: {
-      responseMimeType: "application/json"
-    }
-  });
-
-  if (!response.text) throw new Error("No response from AI");
   
-  return JSON.parse(response.text) as AppContent;
+  if (!ai) {
+    console.warn("API Key missing, skipping translation");
+    return content;
+  }
+
+  try {
+    const prompt = `
+      Translate the values of the following JSON object to ${targetLanguage}.
+      Keep all keys and structure exactly the same.
+      Do not translate technical terms like "EstateOS", "Notion", "Canva".
+      Return the result as valid JSON.
+    `;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-2.5-flash',
+      contents: [
+        { text: prompt },
+        { text: JSON.stringify(content) }
+      ],
+      config: {
+        responseMimeType: "application/json"
+      }
+    });
+
+    const text = response.text;
+    if (text) {
+      return JSON.parse(text) as AppContent;
+    }
+    return content;
+  } catch (error) {
+    console.error("Translation Error:", error);
+    return content;
+  }
 };
 
 const getDefaultScript = (type: ScriptType): string => {

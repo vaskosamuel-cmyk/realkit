@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { CONTENT } from '../constants';
 
 export const FAQ: React.FC = () => {
-  const { content } = useLanguage();
-  const t = content.faq;
+  const t = CONTENT.faq;
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type Language = 'en' | 'es' | 'de' | 'fr';
+export type Language = 'en' | 'es' | 'fr' | 'de' | 'it' | 'pt';
 
 export interface Testimonial {
   id: number;
@@ -14,7 +14,6 @@ export interface Testimonial {
 export interface FeatureItem {
   title: string;
   description: string;
-  // Icon is separate from content translation
 }
 
 export interface PricingItem {
@@ -29,12 +28,11 @@ export enum ScriptType {
   REFERRAL = "Referral Request"
 }
 
-// Global Content Structure for Translation
 export interface AppContent {
   nav: {
     features: string;
     preview: string;
-    stories: string;
+    reviews: string;
     contact: string;
     cta: string;
     mobileCta: string;
@@ -67,7 +65,7 @@ export interface AppContent {
     generating: string;
     previewLabel: string;
     emptyState: string;
-    promptContext: string; // "Focus on high value..."
+    promptContext: string;
   };
   testimonials: {
     headline: string;

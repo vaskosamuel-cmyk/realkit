@@ -18,11 +18,11 @@ export const FEATURE_ICONS = [
   TrendingUp
 ];
 
-export const INITIAL_CONTENT: AppContent = {
+export const CONTENT: AppContent = {
   nav: {
     features: "Features",
     preview: "Preview",
-    stories: "Stories",
+    reviews: "Reviews",
     contact: "Contact",
     cta: "Get the Bundle",
     mobileCta: "Get Access Now"
@@ -177,3 +177,5 @@ export const INITIAL_CONTENT: AppContent = {
     links: ["Privacy Policy", "Terms of Service", "Contact Support"]
   }
 };
+
+export const INITIAL_CONTENT = CONTENT;

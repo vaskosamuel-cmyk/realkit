@@ -1,10 +1,8 @@
 import React from 'react';
-import { APP_NAME } from '../constants';
-import { useLanguage } from '../contexts/LanguageContext';
+import { APP_NAME, CONTENT } from '../constants';
 
 export const Footer: React.FC = () => {
-  const { content } = useLanguage();
-  const t = content.footer;
+  const t = CONTENT.footer;
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, linkText: string) => {
     // If the link is "Contact Support" (in any language, assuming it's the 3rd item), scroll to contact section

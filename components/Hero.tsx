@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ArrowRight, CheckCircle2, Star } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { CONTENT } from '../constants';
 
 interface HeroProps {
   onOpenModal: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
-  const { content } = useLanguage();
-  const t = content.hero;
+  const t = CONTENT.hero;
 
   return (
     <section id="hero" className="relative pt-32 pb-12 md:pt-48 md:pb-20 overflow-hidden">
       {/* Background Gradient Mesh */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-blue-50 to-transparent -z-10 opacity-60" />
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-100/40 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/4" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/4" />
       
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
         
@@ -38,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         {/* Headline */}
         <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto">
           {t.headline} <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">{t.headlineGradient}</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">{t.headlineGradient}</span>
         </h1>
 
         {/* Subheadline */}

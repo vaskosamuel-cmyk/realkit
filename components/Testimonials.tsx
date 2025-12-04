@@ -1,10 +1,9 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { CONTENT } from '../constants';
 
 export const Testimonials: React.FC = () => {
-  const { content } = useLanguage();
-  const t = content.testimonials;
+  const t = CONTENT.testimonials;
   
   // Duplicate items to ensure smooth infinite scroll on wide screens.
   const baseItems = [...t.list, ...t.list]; 

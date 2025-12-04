@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, CheckCircle2, Lock, ArrowRight } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { CONTENT } from '../constants';
 
 interface EmailModalProps {
   isOpen: boolean;
@@ -8,8 +8,7 @@ interface EmailModalProps {
 }
 
 export const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
-  const { content } = useLanguage();
-  const t = content.modal;
+  const t = CONTENT.modal;
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);

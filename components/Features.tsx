@@ -1,11 +1,9 @@
 import React from 'react';
-import { FEATURE_ICONS } from '../constants';
+import { FEATURE_ICONS, CONTENT } from '../constants';
 import { Sparkles } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
 
 export const Features: React.FC = () => {
-  const { content } = useLanguage();
-  const t = content.features;
+  const t = CONTENT.features;
 
   return (
     <section id="features" className="py-12 md:py-20 bg-slate-50">

@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { generateRealEstateScript } from '../services/aiService';
 import { ScriptType } from '../types';
 import { Bot, RefreshCw, Copy, Check } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { CONTENT } from '../constants';
 
 export const AiDemo: React.FC = () => {
-  const { content, language } = useLanguage();
-  const t = content.aiDemo;
+  const t = CONTENT.aiDemo;
   const [selectedType, setSelectedType] = useState<ScriptType>(ScriptType.EXPIRED);
   const [generatedScript, setGeneratedScript] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
@@ -15,8 +14,7 @@ export const AiDemo: React.FC = () => {
   const handleGenerate = async () => {
     setIsLoading(true);
     setCopied(false);
-    // Pass current language to the script generator
-    const script = await generateRealEstateScript(selectedType, t.promptContext, language);
+    const script = await generateRealEstateScript(selectedType, t.promptContext);
     setGeneratedScript(script);
     setIsLoading(false);
   };

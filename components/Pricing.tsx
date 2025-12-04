@@ -1,14 +1,13 @@
 import React from 'react';
 import { Check, Lock } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { CONTENT } from '../constants';
 
 interface PricingProps {
   onOpenModal: () => void;
 }
 
 export const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
-  const { content } = useLanguage();
-  const t = content.pricing;
+  const t = CONTENT.pricing;
   
   const totalValue = t.items.reduce((acc, item) => acc + item.value, 0);
 
@@ -16,8 +15,8 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
     <section id="pricing" className="py-12 md:py-20 bg-slate-900 text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="max-w-4xl mx-auto px-6 relative z-10">

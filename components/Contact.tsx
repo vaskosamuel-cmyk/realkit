@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Mail, MessageSquare, Send, CheckCircle2, User } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { CONTENT } from '../constants';
 
 export const Contact: React.FC = () => {
-  const { content } = useLanguage();
-  const t = content.contact;
+  const t = CONTENT.contact;
   
   const [formData, setFormData] = useState({
     name: '',
