@@ -76,6 +76,7 @@ export interface AppContent {
     items: PricingItem[];
     totalValue: string;
     offerLabel: string;
+    urgency: string;
     secureLabel: string;
     cta: string;
     subtext: string;

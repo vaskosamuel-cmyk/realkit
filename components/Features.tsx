@@ -32,7 +32,7 @@ export const Features: React.FC = () => {
             );
           })}
           
-          {/* Special "AI Ready" Bento Box */}
+          {/* Special "AI Ready" Bento Box - Always fits in the remaining slot */}
           <div className="p-8 rounded-3xl bg-slate-900 text-white shadow-xl flex flex-col justify-between relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div>
@@ -44,7 +44,7 @@ export const Features: React.FC = () => {
                 {t.aiBox.description}
               </p>
             </div>
-            <div className="mt-6 flex items-center gap-2 text-sm font-medium text-blue-300 group-hover:text-blue-200">
+            <div className="mt-6 flex items-center gap-2 text-sm font-medium text-blue-300 group-hover:text-blue-200 cursor-pointer">
               <span>{t.aiBox.link}</span>
             </div>
           </div>

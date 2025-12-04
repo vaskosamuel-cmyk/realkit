@@ -59,10 +59,6 @@ export const CONTENT: AppContent = {
       {
         title: "Email Sequences",
         description: "Automated nurture campaigns that turn cold leads into warm appointments.",
-      },
-      {
-        title: "Social Systems",
-        description: "365 days of content ideas and caption templates.",
       }
     ],
     aiBox: {
@@ -122,9 +118,12 @@ export const CONTENT: AppContent = {
       { name: "365-Day Social Media Content Calendar", value: 97 },
       { name: "Email Nurture Sequence Pack", value: 197 },
       { name: "Bonus: Buyer Consultation Guide", value: 97 },
+      { name: "Objection Handling Flashcards", value: 47 },
+      { name: "Open House Sign-in Sheets", value: 27 },
     ],
     totalValue: "Total Value",
     offerLabel: "Limited Time Offer",
+    urgency: "Price increases in 24 hours",
     secureLabel: "Secure SSL Payment",
     cta: "Get Access Now",
     subtext: "One-time payment. Lifetime access."

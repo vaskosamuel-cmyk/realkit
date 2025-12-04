@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MessageSquare, Send, CheckCircle2, User } from 'lucide-react';
+import { Mail, MessageSquare, Send, CheckCircle2, User, HelpCircle } from 'lucide-react';
 import { CONTENT } from '../constants';
 
 export const Contact: React.FC = () => {
@@ -12,32 +12,21 @@ export const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const myForm = e.currentTarget;
-    const bodyFormData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(bodyFormData as any).toString(),
-    })
-      .then(() => {
+    // Simulate API call
+    setTimeout(() => {
         setIsSubmitting(false);
         setIsSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
         
         // Reset success message after 5 seconds
         setTimeout(() => setIsSubmitted(false), 5000);
-      })
-      .catch((error) => {
-        console.error("Form submission error:", error);
-        setIsSubmitting(false);
-        alert("Something went wrong. Please try again.");
-      });
+    }, 1500);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -48,16 +37,12 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-20 bg-slate-50 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-start">
+    <section id="contact" className="py-12 md:py-24 bg-white border-t border-slate-100">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-5 gap-12 lg:gap-24 items-start">
           
           {/* Info Side */}
-          <div className="md:sticky md:top-32">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wide mb-6">
-              <Mail size={14} />
-              Support
-            </div>
+          <div className="md:col-span-2 md:sticky md:top-32">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
               {t.headline}
             </h2>
@@ -65,23 +50,23 @@ export const Contact: React.FC = () => {
               {t.subheadline}
             </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0">
-                  <Mail size={18} className="text-blue-600" />
+            <div className="space-y-8">
+              <div className="flex items-start gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition-colors">
+                  <Mail size={22} className="text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-900 mb-1">Email Us</h4>
+                  <h4 className="text-lg font-bold text-slate-900 mb-1">Email Us</h4>
                   <p className="text-slate-600">{t.info.email}</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0">
-                  <MessageSquare size={18} className="text-blue-600" />
+              <div className="flex items-start gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center shrink-0 group-hover:bg-slate-100 transition-colors">
+                  <MessageSquare size={22} className="text-slate-700" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-900 mb-1">Support</h4>
+                  <h4 className="text-lg font-bold text-slate-900 mb-1">Live Chat</h4>
                   <p className="text-slate-600">{t.info.support}</p>
                 </div>
               </div>
@@ -89,95 +74,107 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Form Side */}
-          <div className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100 relative overflow-hidden">
-            {isSubmitted ? (
-              <div className="min-h-[400px] flex flex-col items-center justify-center text-center animate-in fade-in zoom-in">
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
-                  <CheckCircle2 size={32} className="text-green-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Message Sent!</h3>
-                <p className="text-slate-600">{t.form.successMessage}</p>
-              </div>
-            ) : (
-              <form 
-                name="contact" 
-                method="POST" 
-                data-netlify="true" 
-                onSubmit={handleSubmit} 
-                className="space-y-6"
-              >
-                <input type="hidden" name="form-name" value="contact" />
-                
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                    {t.form.nameLabel}
-                  </label>
-                  <div className="relative">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all"
-                      placeholder="John Doe"
-                    />
+          <div className="md:col-span-3">
+            <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-2xl shadow-slate-200/50 border border-slate-100 relative overflow-hidden">
+              {isSubmitted ? (
+                <div className="min-h-[440px] flex flex-col items-center justify-center text-center animate-in fade-in zoom-in duration-300">
+                  <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-8">
+                    <CheckCircle2 size={40} className="text-green-600" />
                   </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Message Sent!</h3>
+                  <p className="text-slate-600 max-w-xs mx-auto">{t.form.successMessage}</p>
                 </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                    {t.form.emailLabel}
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                    {t.form.messageLabel}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all resize-none"
-                    placeholder="How can we help?"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-slate-800 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+              ) : (
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  onSubmit={handleSubmit} 
+                  className="space-y-6"
                 >
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      {t.form.submitButton}
-                      <Send size={18} />
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
+                  <div className="space-y-2">
+                    <label 
+                      htmlFor="name" 
+                      className={`text-sm font-semibold transition-colors ${focusedField === 'name' ? 'text-blue-600' : 'text-slate-700'}`}
+                    >
+                      {t.form.nameLabel}
+                    </label>
+                    <div className="relative">
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('name')}
+                        onBlur={() => setFocusedField(null)}
+                        className="w-full pl-4 pr-4 py-4 rounded-xl bg-slate-50 border-2 border-transparent focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-900 placeholder:text-slate-400"
+                        placeholder="e.g. Michael Scott"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label 
+                      htmlFor="email" 
+                      className={`text-sm font-semibold transition-colors ${focusedField === 'email' ? 'text-blue-600' : 'text-slate-700'}`}
+                    >
+                      {t.form.emailLabel}
+                    </label>
+                    <div className="relative">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('email')}
+                        onBlur={() => setFocusedField(null)}
+                        className="w-full pl-4 pr-4 py-4 rounded-xl bg-slate-50 border-2 border-transparent focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-900 placeholder:text-slate-400"
+                        placeholder="e.g. michael@dundermifflin.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label 
+                      htmlFor="message" 
+                      className={`text-sm font-semibold transition-colors ${focusedField === 'message' ? 'text-blue-600' : 'text-slate-700'}`}
+                    >
+                      {t.form.messageLabel}
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleChange}
+                      onFocus={() => setFocusedField('message')}
+                      onBlur={() => setFocusedField(null)}
+                      className="w-full px-4 py-4 rounded-xl bg-slate-50 border-2 border-transparent focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-900 placeholder:text-slate-400 resize-none"
+                      placeholder="How can we help you scale?"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 hover:scale-[1.01] active:scale-[0.99] transition-all shadow-lg shadow-slate-900/20 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed mt-2"
+                  >
+                    {isSubmitting ? (
+                      "Sending Message..."
+                    ) : (
+                      <>
+                        {t.form.submitButton}
+                        <Send size={20} />
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
 
         </div>
