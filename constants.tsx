@@ -177,5 +177,3 @@ export const CONTENT: AppContent = {
     links: ["Privacy Policy", "Terms of Service", "Contact Support"]
   }
 };
-
-export const INITIAL_CONTENT = CONTENT;

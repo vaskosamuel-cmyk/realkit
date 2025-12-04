@@ -1,7 +1,5 @@
 import React from 'react';
 
-export type Language = 'en' | 'es' | 'fr' | 'de' | 'it' | 'pt';
-
 export interface Testimonial {
   id: number;
   name: string;

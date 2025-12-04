@@ -1,5 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
-import { ScriptType, AppContent, Language } from '../types';
+import { ScriptType } from '../types';
 
 // Helper to get AI instance safely
 const getAiInstance = () => {
@@ -38,44 +38,6 @@ export const generateRealEstateScript = async (type: ScriptType, context: string
   } catch (error) {
     console.error("AI Generation Error:", error);
     return getDefaultScript(type);
-  }
-};
-
-export const translateAppContent = async (content: AppContent, targetLanguage: Language): Promise<AppContent> => {
-  const ai = getAiInstance();
-  
-  if (!ai) {
-    console.warn("API Key missing, skipping translation");
-    return content;
-  }
-
-  try {
-    const prompt = `
-      Translate the values of the following JSON object to ${targetLanguage}.
-      Keep all keys and structure exactly the same.
-      Do not translate technical terms like "EstateOS", "Notion", "Canva".
-      Return the result as valid JSON.
-    `;
-
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: [
-        { text: prompt },
-        { text: JSON.stringify(content) }
-      ],
-      config: {
-        responseMimeType: "application/json"
-      }
-    });
-
-    const text = response.text;
-    if (text) {
-      return JSON.parse(text) as AppContent;
-    }
-    return content;
-  } catch (error) {
-    console.error("Translation Error:", error);
-    return content;
   }
 };
 
