@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Features } from './components/Features';
-import { AiDemo } from './components/AiDemo';
+import { Story } from './components/Story';
+import { Solution } from './components/Solution';
+import { ProductShowcase } from './components/ProductShowcase';
+import { WhoIsFor } from './components/WhoIsFor';
 import { Testimonials } from './components/Testimonials';
 import { Pricing } from './components/Pricing';
 import { FAQ } from './components/FAQ';
@@ -18,8 +20,10 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero onOpenModal={() => setIsModalOpen(true)} />
-        <Features />
-        <AiDemo />
+        <Story />
+        <Solution />
+        <ProductShowcase />
+        <WhoIsFor />
         <Testimonials />
         <Pricing onOpenModal={() => setIsModalOpen(true)} />
         <FAQ />

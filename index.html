@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EstateOS | The Ultimate Real Estate Bundle</title>
+    <title>RealKit | The Ultimate Real Estate Bundle</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
@@ -37,11 +37,16 @@
             },
             animation: {
               'scroll': 'scroll 60s linear infinite',
+              'scroll-reverse': 'scroll-reverse 60s linear infinite',
             },
             keyframes: {
               scroll: {
                 '0%': { transform: 'translateX(0)' },
                 '100%': { transform: 'translateX(-50%)' },
+              },
+              'scroll-reverse': {
+                '0%': { transform: 'translateX(-50%)' },
+                '100%': { transform: 'translateX(0)' },
               }
             }
           }
@@ -49,7 +54,7 @@
       }
     </script>
     <style>
-      html { scroll-behavior: smooth; }
+      /* Removed scroll-behavior: smooth to prevent conflict with JS scroll */
       body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
       .pause-on-hover:hover {
         animation-play-state: paused;
