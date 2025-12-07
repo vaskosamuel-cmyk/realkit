@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Check, Lock, Clock, Gift } from 'lucide-react';
+import { Check, Lock, Clock, Gift, ArrowRight } from 'lucide-react';
 import { CONTENT } from '../constants';
 
 interface PricingProps {
@@ -49,7 +49,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
             <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-[2.5rem] p-8 md:p-12 shadow-2xl">
               <div className="flex items-baseline justify-between border-b border-white/10 pb-6 mb-8">
                 <h3 className="text-2xl font-bold">{t.listHeader}</h3>
-                <span className="text-slate-400 text-sm font-medium">Value</span>
+                <span className="text-slate-400 text-sm font-medium">Hodnota</span>
               </div>
               
               <ul className="grid md:grid-cols-2 gap-x-12 gap-y-5">
@@ -61,14 +61,14 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
                       </div>
                       <span className="font-medium text-slate-200 group-hover:text-white transition-colors text-base md:text-lg">{item.name}</span>
                     </div>
-                    <span className="text-slate-500 font-medium shrink-0 group-hover:text-slate-400 text-right">${item.value}</span>
+                    <span className="text-slate-500 font-medium shrink-0 group-hover:text-slate-400 text-right">{item.value}€</span>
                   </li>
                 ))}
               </ul>
               
               <div className="flex justify-center items-center gap-4 pt-10 mt-2 border-t border-white/5">
-                <span className="text-slate-400 font-medium uppercase tracking-wide text-sm">Total Value</span>
-                <span className="text-3xl font-bold text-slate-300 line-through decoration-red-500/60 decoration-2">${totalValue}</span>
+                <span className="text-slate-400 font-medium uppercase tracking-wide text-sm">Celková Hodnota</span>
+                <span className="text-3xl font-bold text-slate-300 line-through decoration-red-500/60 decoration-2">{totalValue}€</span>
               </div>
             </div>
 
@@ -82,7 +82,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
                  {/* Left Column: What You Get Recap */}
                  <div className="space-y-8">
                    <div className="space-y-4">
-                     <h4 className="text-xl font-bold text-slate-900">What's Inside:</h4>
+                     <h4 className="text-xl font-bold text-slate-900">Získajte všetko v RealKite plus:</h4>
                      <ul className="space-y-3">
                        {t.mainFeatures.map((feature, i) => (
                          <li key={i} className="flex items-center gap-3">
@@ -98,7 +98,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
                    <div className="space-y-4 bg-slate-50 p-5 rounded-2xl border border-slate-100">
                      <div className="flex items-center gap-2 text-blue-600 font-bold">
                        <Gift size={20} />
-                       <h4 className="uppercase tracking-wide text-sm">Fast Action Bonuses</h4>
+                       <h4 className="uppercase tracking-wide text-sm">Rýchle Bonusy Zadarmo</h4>
                      </div>
                      <ul className="space-y-3">
                        {t.bonuses.map((bonus, i) => (
@@ -106,7 +106,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
                            <span className="bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase mt-1">Free</span>
                            <div className="flex flex-col">
                              <span className="text-slate-900 font-bold">{bonus.title}</span>
-                             <span className="text-slate-500 text-xs">Value: {bonus.value}</span>
+                             <span className="text-slate-500 text-xs">Hodnota: {bonus.value}</span>
                            </div>
                          </li>
                        ))}
@@ -117,14 +117,30 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
                  {/* Right Column: Close */}
                  <div className="flex flex-col items-center text-center">
                     {/* Urgency Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-100 text-red-600 text-sm font-bold uppercase tracking-wide animate-pulse shadow-sm mb-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-100 text-red-600 text-sm font-bold uppercase tracking-wide animate-pulse shadow-sm mb-4">
                       <Clock size={16} />
-                      <span>Price increases in {format(timeLeft.h)}:{format(timeLeft.m)}:{format(timeLeft.s)}</span>
+                      <span>{t.urgency} {format(timeLeft.h)}:{format(timeLeft.m)}:{format(timeLeft.s)}</span>
                     </div>
 
-                    <div className="flex items-baseline gap-3 mb-6">
-                      <span className="text-7xl lg:text-8xl font-extrabold text-slate-900 tracking-tighter drop-shadow-sm">$97</span>
-                      <span className="text-3xl font-bold text-slate-400 line-through decoration-4 decoration-red-400/50">${totalValue}</span>
+                    {/* Savings Badge */}
+                    <div className="mb-2">
+                      <span className="bg-yellow-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-lg uppercase tracking-wider shadow-sm inline-block">
+                        UŠETRÍTE 92%
+                      </span>
+                    </div>
+
+                    {/* Price Row: Old -> Arrow -> New */}
+                    <div className="flex items-center justify-center gap-3 md:gap-4 mb-6 leading-none mt-2">
+                      <span className="text-3xl md:text-4xl font-bold text-slate-400 line-through decoration-2 decoration-red-400/50">
+                        {totalValue}€
+                      </span>
+                      
+                      <ArrowRight size={32} className="text-slate-300 hidden md:block" />
+                      <span className="text-slate-300 text-2xl md:hidden">→</span>
+
+                      <span className="text-7xl lg:text-8xl font-extrabold text-slate-900 tracking-tighter drop-shadow-sm">
+                        97€
+                      </span>
                     </div>
 
                     <button 

@@ -7,279 +7,279 @@ export const FEATURE_ICONS = [Zap, Shield, Smartphone, Globe, BarChart3, Users];
 
 export const CONTENT: AppContent = {
   nav: {
-    features: "Features",
-    preview: "Preview",
-    pricing: "Pricing",
-    reviews: "Reviews",
-    contact: "Contact",
-    cta: "Get the Bundle",
-    mobileCta: "Get Access Now"
+    features: "Funkcie",
+    preview: "Ukážka",
+    pricing: "Cena",
+    reviews: "Recenzie",
+    contact: "Kontakt",
+    cta: "Získať Balík",
+    mobileCta: "Získať Prístup"
   },
   hero: {
-    trustedBadge: "Trusted by 2,400+ Agents",
-    headline: "The Operating System for",
-    headlineGradient: "Modern Real Estate.",
-    subheadline: "Stop struggling with scattered spreadsheets and generic templates. Get the all-in-one Notion CRM, marketing system, and script bible used by top 1% producers.",
-    ctaPrimary: "Get Instant Access",
-    ctaSecondary: "See What's Inside",
+    trustedBadge: "Používa viac ako 2,400+ maklérov",
+    headline: "Operačný systém pre",
+    headlineGradient: "moderných maklérov.",
+    subheadline: "Prestaňte bojovať s rozhádzanými tabuľkami a zastaranými šablónami. Získajte all-in-one Notion CRM, marketingový systém a bibliu skriptov, ktoré používajú tí najlepší.",
+    ctaPrimary: "Získať okamžitý prístup",
+    ctaSecondary: "Čo je vo vnútri?",
     valueProps: [
-      "One-time payment",
-      "Lifetime updates included",
-      "Instant download"
+      "Jednorazová platba",
+      "Doživotné aktualizácie",
+      "Okamžité stiahnutie"
     ]
   },
   story: {
-    headline: "Why Most Agents Stay Stuck at the Same Income Level",
-    subheadline: "You’re not losing deals because you’re lazy. You’re losing them because you’re reinventing the wheel every single time – new ad text, new email, new presentation, new follow-up… while top agents use proven scripts and systems they repeat every day.",
+    headline: "Prečo väčšina maklérov stagnuje na rovnakom príjme",
+    subheadline: "Neprichádzate o obchody preto, že ste leniví. Strácate ich, pretože zakaždým znovu 'vynaliezate koleso' – nový text inzerátu, nový email, nová prezentácia... zatiaľ čo top makléri používajú overené systémy každý deň.",
     bullets: [
-      "Spending hours writing property descriptions and posts that get no leads",
-      "Going blank on calls because you don’t know exactly what to say next",
-      "Inconsistent follow-ups – so hotter clients go to more prepared agents",
-      "No clear 'system' from first contact to signed contract",
-      "Feeling like you’re always reacting instead of executing a plan"
+      "Hodiny strávené písaním popisov nehnuteľností bez výsledkov",
+      "Strach a ticho v telefóne, keď presne neviete, čo povedať ďalej",
+      "Chaotický follow-up – horúci klienti utekajú k pripravenejším maklérom",
+      "Žiadny jasný 'systém' od prvého kontaktu až po podpis zmluvy",
+      "Pocit, že neustále len hasíte problémy namiesto strategického plánovania"
     ],
-    bridge: "Imagine if every step was already mapped out and written for you…"
+    bridge: "Predstavte si, že každý jeden krok máte vopred napísaný a pripravený…"
   },
   solution: {
-    headline: "Introducing RealKit: Your Complete Plug-and-Play System for Real Estate Success",
-    description: "RealKit is a digital bundle of ready-to-use scripts, templates, checklists, and mini-systems built specifically for real estate agents. Instead of guessing what to say, what to post, or what to send next, you open RealKit, copy the template, customize a few details, and use it.",
+    headline: "Predstavujeme RealKit: Váš kompletný Plug-and-Play systém pre realitný úspech",
+    description: "RealKit je digitálny balík hotových skriptov, šablón, checklistov a mini-systémov vytvorený špeciálne pre realitných maklérov. Namiesto hádania, čo povedať alebo čo poslať klientovi, jednoducho otvoríte RealKit, skopírujete šablónu a idete na istotu.",
     pillars: [
       {
-        title: "Scripts that Sell",
-        description: "Phone, meeting, and follow-up scripts that turn “just looking” into “where do I sign?”"
+        title: "Skripty, ktoré predávajú",
+        description: "Telefónne, stretávacie a follow-up skripty, ktoré menia „len sa pozerám“ na „kde mám podpísať?“."
       },
       {
-        title: "Marketing That Attracts Leads",
-        description: "Plug-and-play templates for social media, email, and ads – no copywriting skills needed."
+        title: "Marketing, ktorý priťahuje",
+        description: "Hotové šablóny pre sociálne siete, emaily a reklamy – nepotrebujete byť copywriter."
       },
       {
-        title: "Systems That Save Time",
-        description: "Checklists and workflows so you always know your next step from first contact to closing."
+        title: "Systémy, ktoré šetria čas",
+        description: "Checklisty a workflow procesy, aby ste vždy vedeli, aký je ďalší krok od náberu po predaj."
       }
     ],
-    cta: "See Everything Inside RealKit"
+    cta: "Pozrieť si obsah RealKitu"
   },
   showcase: {
-    headline: "Your All-In-One Growth Engine",
-    subheadline: "We've consolidated the four pillars of a successful real estate business into one seamless ecosystem.",
+    headline: "Váš motor pre rast biznisu",
+    subheadline: "Spojili sme štyri piliere úspešného realitného podnikania do jedného plynulého ekosystému.",
     modules: [
       {
         id: "crm",
-        title: "The Notion Command Center",
-        description: "The heartbeat of your business. Track every lead, active listing, and pending deal in one visual dashboard without the $199/mo fees of clunky software.",
+        title: "Notion Riadiace Centrum",
+        description: "Srdce vášho biznisu. Sledujte každý lead, aktívny náber a rozpracovaný obchod v jednom vizuálnom dashboarde bez mesačných poplatkov za drahý softvér.",
         image: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=2070&auto=format&fit=crop",
         features: [
-          "Pipeline Management Board",
-          "Automated Follow-up Reminders",
-          "Active Listing Checklist",
-          "Commission & GCI Tracker"
+          "Manažment obchodného lievika (Pipeline)",
+          "Automatické pripomienky follow-upov",
+          "Checklist pre aktívne nábery",
+          "Sledovanie provízií a obratu"
         ]
       },
       {
         id: "scripts",
-        title: "The Script Vault",
-        description: "Never stumble on your words again. This isn't just a PDF; it's a battle-tested library of persuasion frameworks for every objection imaginable.",
+        title: "Biblia Skriptov",
+        description: "Už nikdy sa nezaseknete pri telefonovaní. Toto nie je len PDF; je to bojom overená knižnica presvedčovacích rámcov pre každú možnú námietku.",
         image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2574&auto=format&fit=crop",
         features: [
-          "Expired & FSBO Frameworks",
-          "The 'Perfect Price Reduction' Script",
-          "Buyer Consultation Roadmap",
-          "Referral Generation Dialogues"
+          "Skripty na exspirácie a samopredajcov (FSBO)",
+          "Scenár pre 'Zníženie Ceny'",
+          "Cestovná mapa náberovej prezentácie",
+          "Dialógy na získavanie referencií"
         ]
       },
       {
         id: "marketing",
-        title: "Marketing Suite",
-        description: "Look like a luxury brokerage from day one. High-converting designs that position you as the authority in your market.",
+        title: "Marketingová Sada",
+        description: "Vyzerať ako luxusná kancelária môžete od prvého dňa. Dizajny s vysokou konverziou, ktoré vás postavia do pozície autority na trhu.",
         image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
         features: [
-          "Luxury Listing Presentation (Canva)",
-          "Open House Sign-in Sheets",
-          "Just Listed / Just Sold Flyers",
-          "Social Media Story Templates"
+          "Luxusná Naberacia Prezentácia (Canva)",
+          "Hárky pre Obhliadky (Open House)",
+          "Letáky Práve Naberané / Predané",
+          "Šablóny pre Instagram Stories"
         ]
       },
       {
         id: "systems",
-        title: "Growth Systems",
-        description: "Stop reinventing the wheel. Plug into proven workflows that nurture leads on autopilot.",
+        title: "Rastové Systémy",
+        description: "Prestaňte vymýšľať koleso. Zapojte sa do overených pracovných postupov, ktoré automaticky 'zohrievajú' vašich klientov.",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
         features: [
-          "365-Day Content Calendar",
-          "Email Nurture Sequences",
-          "Pre-Listing Questionnaire",
-          "Vendor Partner Database"
+          "365-dňový Kalendár Obsahu",
+          "Sady Emailových Sekvencií",
+          "Dotazník pred náberom",
+          "Databáza dodávateľov a partnerov"
         ]
       }
     ]
   },
   whoIsFor: {
-    headline: "Who RealKit Is For (and Who It’s Not For)",
+    headline: "Pre koho je RealKit (a pre koho nie)",
     perfectFor: {
-      title: "Perfect For You If...",
+      title: "Ideálne pre vás, ak...",
       items: [
-        "You’re a new or growing real estate agent who wants a proven structure.",
-        "You’re tired of guessing what to say on calls and in messages.",
-        "You want to save time with ready-to-use templates instead of writing from scratch."
+        "Ste nový alebo rastúci maklér, ktorý chce mať vo veciach poriadok.",
+        "Už vás nebaví hádať, čo povedať do telefónu a v správach.",
+        "Chcete ušetriť čas hotovými šablónami namiesto písania od nuly."
       ]
     },
     notFor: {
-      title: "Not For You If...",
+      title: "Nie je pre vás, ak...",
       items: [
-        "You’re looking for a ‘magic button’ without doing any work.",
-        "You already have a fully optimized, documented system that works.",
-        "You don’t want to follow scripts or use templates at all."
+        "Hľadáte 'magické tlačidlo', ktoré zarobí peniaze bez práce.",
+        "Máte už dokonale zdokumentovaný systém, ktorý funguje.",
+        "Odmietate používať akékoľvek skripty alebo šablóny."
       ]
     }
   },
   features: {
-    headline: "Everything You Need to Scale",
-    subheadline: "No fluff. Just the tools that actually move the needle in your real estate business.",
+    headline: "Všetko potrebné pre škálovanie",
+    subheadline: "Žiadna vata. Len nástroje, ktoré reálne posúvajú váš realitný biznis vpred.",
     items: [
       {
-        title: "Instant Setup",
-        description: "Duplicate the Notion workspace and be up and running in less than 5 minutes."
+        title: "Okamžité nastavenie",
+        description: "Duplikujte si Notion pracovnú plochu a začnite fungovať do 5 minút."
       },
       {
-        title: "Mobile Optimized",
-        description: "Access your scripts and CRM from your phone while you're on the go."
+        title: "Optimalizované pre mobil",
+        description: "Pristupujte k svojim skriptom a CRM priamo z mobilu, aj keď ste v teréne."
       },
       {
-        title: "Lifetime Updates",
-        description: "Pay once and get every future update and new template for free."
+        title: "Doživotné aktualizácie",
+        description: "Zaplatíte raz a každú budúcu aktualizáciu a novú šablónu máte zadarmo."
       },
       {
-        title: "No Monthly Fees",
-        description: "Stop paying $199/month for bloated software you don't use."
+        title: "Žiadne mesačné poplatky",
+        description: "Prestaňte platiť stovky eur mesačne za zložitý softvér, ktorý nevyužívate."
       },
       {
-        title: "Data Privacy",
-        description: "Your data lives in your Notion account. We never see your leads."
+        title: "Súkromie dát",
+        description: "Vaše dáta žijú vo vašom Notion účte. My vaše kontakty nikdy nevidíme."
       }
     ],
     aiBox: {
-      title: "AI-Ready Architecture",
-      description: "Built to integrate seamlessly with the latest AI tools for real estate agents.",
-      link: "Learn more about AI integration"
+      title: "Pripravené na AI",
+      description: "Postavené tak, aby sa dalo ľahko integrovať s najnovšími AI nástrojmi pre maklérov.",
+      link: "Viac o AI integrácii"
     }
   },
   testimonials: {
-    headline: "Real Agents. Real Results.",
+    headline: "Skutoční makléri. Skutočné výsledky.",
     list: [
       {
         id: 1,
-        name: "Sarah Jenkins",
-        role: "Top 1% Producer, NYC",
+        name: "Jana Kováčová",
+        role: "Top Maklérka, Bratislava",
         image: "https://picsum.photos/100/100?random=1",
-        text: "I was drowning in disorganized spreadsheets. RealKit completely streamlined my business. I closed 3 extra deals last month just by following the follow-up system.",
+        text: "Topila som sa v neorganizovaných excel tabuľkách. RealKit kompletne zefektívnil môj biznis. Len vďaka systému follow-upov som minulý mesiac uzavrela o 3 obchody viac.",
         rating: 5
       },
       {
         id: 2,
-        name: "Marcus Thorne",
-        role: "Agency Owner",
+        name: "Marek Tóth",
+        role: "Majiteľ RK",
         image: "https://picsum.photos/100/100?random=2",
-        text: "The listing templates alone are worth the price. They look better than what my brokerage provides. My clients are consistently impressed.",
+        text: "Len tie naberacie šablóny majú hodnotu celého balíka. Vyzerajú profesionálnejšie než to, čo poskytuje naša sieť. Klienti sú nadšení.",
         rating: 5
       },
       {
         id: 3,
-        name: "Elena Rodriguez",
-        role: "Real Estate Agent",
+        name: "Elena R.",
+        role: "Realitná Maklérka",
         image: "https://picsum.photos/100/100?random=3",
-        text: "Simple, clean, and effective. I didn't want a complex software with a monthly fee. This one-time purchase was the best investment I made this year.",
+        text: "Jednoduché, čisté a efektívne. Nechcela som zložitý softvér s mesačným poplatkom. Táto jednorazová investícia bola to najlepšie rozhodnutie roka.",
         rating: 5
       }
     ]
   },
   pricing: {
-    headline: "Get the Unfair Advantage Today.",
-    subheadline: "Join hundreds of agents scaling their business with RealKit.",
-    listHeader: "What's Included:",
+    headline: "Získajte nefér výhodu ešte dnes.",
+    subheadline: "Pridajte sa k stovkám maklérov, ktorí škálujú svoj biznis s RealKitom.",
+    listHeader: "Čo všetko je v balíku:",
     items: [
-      { name: "RealKit Notion CRM System", value: 497 },
-      { name: "The Ultimate Script Bible (50+ Scripts)", value: 197 },
-      { name: "Luxury Listing Presentation Template", value: 147 },
-      { name: "365-Day Social Media Content Calendar", value: 97 },
-      { name: "Email Nurture Sequence Pack", value: 197 },
-      { name: "Bonus: Buyer Consultation Guide", value: 97 },
-      { name: "Objection Handling Flashcards", value: 47 },
-      { name: "Open House Sign-in Sheets", value: 27 },
+      { name: "RealKit Notion CRM Systém", value: 497 },
+      { name: "Ultimátna Biblia Skriptov (50+)", value: 197 },
+      { name: "Šablóna Luxusnej Naberacej Prezentácie", value: 147 },
+      { name: "365-dňový Kalendár Obsahu", value: 97 },
+      { name: "Sada Emailových Sekvencií", value: 197 },
+      { name: "Bonus: Sprievodca pre Kupujúcich", value: 97 },
+      { name: "Kartičky na Zvládanie Námietok", value: 47 },
+      { name: "Hárky pre Obhliadky (Open House)", value: 27 },
     ],
     mainFeatures: [
-      "Complete Notion CRM Dashboard",
-      "50+ Battle-Tested Scripts",
-      "Luxury Marketing Suite",
-      "Automated Email Flows"
+      "Kompletný Notion CRM Dashboard",
+      "50+ Bojom overených Skriptov",
+      "Luxusná Marketingová Sada",
+      "Automatizované Emailové Toky"
     ],
     bonuses: [
-      { title: "Buyer Consultation Guide", value: "$97" },
-      { title: "Objection Flashcards", value: "$47" },
-      { title: "Open House Sign-ins", value: "$27" }
+      { title: "Sprievodca pre Kupujúcich", value: "97€" },
+      { title: "Kartičky na Námietky", value: "47€" },
+      { title: "Hárky na Obhliadky", value: "27€" }
     ],
-    totalValue: "Total Value",
-    offerLabel: "Limited Time Offer",
-    urgency: "Price increases in 24 hours",
-    secureLabel: "Secure SSL Payment",
-    cta: "Get Access Now",
-    subtext: "One-time payment. Lifetime access."
+    totalValue: "Celková Hodnota",
+    offerLabel: "Limitovaná Ponuka",
+    urgency: "Cena onedlho stúpne",
+    secureLabel: "Bezpečná SSL Platba",
+    cta: "Získať Prístup Teraz",
+    subtext: "Jednorazová platba. Doživotný prístup."
   },
   faq: {
-    headline: "Frequently Asked Questions",
+    headline: "Časté Otázky",
     items: [
       {
-        question: "Do I need to pay a monthly subscription?",
-        answer: "Never. RealKit is a one-time purchase. You own the templates, the system, and the assets forever."
+        question: "Musím platiť mesačné poplatky?",
+        answer: "Nikdy. RealKit je jednorazová investícia. Všetky šablóny, systémy a budúce aktualizácie vlastníte navždy."
       },
       {
-        question: "Is this compatible with mobile?",
-        answer: "Yes! Since the core system is built on Notion and Canva, you can access your CRM and templates from any device, anywhere."
+        question: "Funguje to aj na mobile?",
+        answer: "Áno! Keďže jadro systému je postavené na platformách Notion a Canva, k svojmu CRM a šablónam máte prístup z akéhokoľvek zariadenia, kdekoľvek."
       },
       {
-        question: "I'm a new agent. Is this for me?",
-        answer: "Absolutely. This is the 'business in a box' most new agents wish they had. It establishes professional systems from day one."
+        question: "Som začínajúci maklér. Je to pre mňa?",
+        answer: "Absolútne. Toto je 'biznis v krabici', ktorý si väčšina nováčikov želá mať na začiatku. Nastaví vám profesionálne systémy od prvého dňa."
       },
       {
-        question: "How do I get access?",
-        answer: "Immediately after purchase, you will receive an email with a secure link to duplicate the workspace and download your assets."
+        question: "Ako získam prístup?",
+        answer: "Okamžite po zakúpení obdržíte email s bezpečným odkazom na duplikovanie pracovnej plochy a stiahnutie všetkých materiálov."
       }
     ]
   },
   contact: {
-    headline: "Get in Touch",
-    subheadline: "Have questions about the bundle? Need help with your download? We're here to help.",
+    headline: "Kontaktujte Nás",
+    subheadline: "Máte otázky o balíku? Potrebujete pomôcť so stiahnutím? Sme tu pre vás.",
     form: {
-      nameLabel: "Your Name",
-      emailLabel: "Email Address",
-      messageLabel: "Message",
-      submitButton: "Send Message",
-      successMessage: "Thanks for reaching out! We'll get back to you shortly."
+      nameLabel: "Vaše Meno",
+      emailLabel: "Emailová Adresa",
+      messageLabel: "Správa",
+      submitButton: "Odoslať Správu",
+      successMessage: "Vďaka za správu! Čoskoro sa vám ozveme."
     },
     info: {
-      email: "support@realkit.com",
-      support: "24/7 Support via Email"
+      email: "podpora@realkit.sk",
+      support: "24/7 Podpora cez Email"
     }
   },
   finalCta: {
-    headline: "Ready to Install a Proven System into Your Real Estate Business?",
-    subheadline: "You can keep guessing what to say, what to post, and what to send… or you can plug in RealKit and start using scripts, templates, and systems that are ready today.",
+    headline: "Pripravení nainštalovať overený systém do vášho biznisu?",
+    subheadline: "Môžete ďalej hádať, čo povedať a čo poslať… alebo môžete zapojiť RealKit a začať používať skripty a systémy, ktoré sú pripravené ešte dnes.",
     pricing: {
-      today: "Today: $97 (one-time)",
-      value: "Total Value: $1,300+",
-      guarantee: "30-day money-back guarantee"
+      today: "Dnes: 97€ (jednorazovo)",
+      value: "Hodnota: 1,300€+",
+      guarantee: "30-dňová garancia vrátenia peňazí"
     },
-    cta: "Get Instant Access to RealKit Now",
-    subtext: "You’re one decision away from a more predictable real estate business."
+    cta: "Získať Okamžitý Prístup k RealKitu",
+    subtext: "Ste jedno rozhodnutie od predvídateľnejšieho realitného biznisu."
   },
   modal: {
-    headline: "Unlock the $49 Special Offer",
-    subheadline: "To access RealKit for the $49 special offer, please enter your email address below.",
-    emailPlaceholder: "Enter your email address",
-    submitButton: "Get Access Now",
-    disclaimer: "We respect your privacy. Unsubscribe at any time."
+    headline: "Odomknite Špeciálnu Ponuku 49€",
+    subheadline: "Pre prístup k RealKitu za špeciálnu cenu 49€ zadajte prosím vašu emailovú adresu nižšie.",
+    emailPlaceholder: "Zadajte váš email",
+    submitButton: "Získať Prístup",
+    disclaimer: "Rešpektujeme vaše súkromie. Odhlásiť sa môžete kedykoľvek."
   },
   footer: {
-    rights: "All rights reserved.",
-    links: ["Privacy Policy", "Terms of Service"]
+    rights: "Všetky práva vyhradené.",
+    links: ["Ochrana Súkromia", "Podmienky Používania"]
   }
 };

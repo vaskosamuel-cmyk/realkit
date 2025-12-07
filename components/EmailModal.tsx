@@ -102,7 +102,7 @@ export const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
                     placeholder={t.emailPlaceholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 md:px-5 md:py-4 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-base md:text-lg"
+                    className="w-full px-4 py-3 md:px-5 md:py-4 rounded-xl border border-slate-200 bg-white text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-base md:text-lg placeholder:text-slate-400"
                   />
                 </div>
                 <button

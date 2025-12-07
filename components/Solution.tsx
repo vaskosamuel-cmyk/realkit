@@ -61,7 +61,8 @@ export const Solution: React.FC = () => {
               })}
             </div>
 
-            <div className="mt-12">
+            {/* Desktop CTA - Hidden on Mobile */}
+            <div className="mt-12 hidden lg:block">
               <button 
                 onClick={() => document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-lg hover:shadow-slate-900/20 text-lg"
@@ -116,7 +117,17 @@ export const Solution: React.FC = () => {
                   );
                 })}
              </div>
+          </div>
 
+          {/* Mobile CTA - Hidden on Desktop, appears under images */}
+          <div className="w-full lg:hidden flex justify-center mt-4">
+             <button 
+                onClick={() => document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full group flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-lg hover:shadow-slate-900/20 text-lg"
+              >
+                {t.cta}
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </button>
           </div>
 
         </div>
