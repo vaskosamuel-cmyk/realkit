@@ -5,7 +5,6 @@ import { MessageSquareText, Magnet, Workflow, ArrowRight } from 'lucide-react';
 export const Solution: React.FC = () => {
   const t = CONTENT.solution;
   const pillars = t.pillars;
-  // Use images from the showcase section for the carousel
   const carouselImages = CONTENT.showcase.modules.map(m => m.image).slice(0, 3);
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -13,7 +12,7 @@ export const Solution: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % carouselImages.length);
-    }, 3000); // Rotate every 3 seconds
+    }, 3000); 
     return () => clearInterval(timer);
   }, [carouselImages.length]);
 
@@ -49,12 +48,12 @@ export const Solution: React.FC = () => {
                 const Icon = getIcon(idx);
                 return (
                   <div key={idx} className="flex gap-5">
-                    <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-100 flex items-center justify-center shrink-0 shadow-sm">
                       <Icon className="text-blue-600" size={26} />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">{pillar.title}</h3>
-                      <p className="text-slate-600 leading-relaxed">{pillar.description}</p>
+                      <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">{pillar.title}</h3>
+                      <p className="text-base md:text-lg text-slate-600 leading-relaxed">{pillar.description}</p>
                     </div>
                   </div>
                 );
@@ -75,31 +74,20 @@ export const Solution: React.FC = () => {
 
           {/* Right Column: Stacked Image Carousel */}
           <div className="w-full lg:w-1/2 relative perspective-1000 min-h-[400px] flex items-center justify-center">
-             {/* Abstract background blobs */}
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100/50 rounded-full blur-3xl -z-10"></div>
              
              <div className="relative w-full max-w-[500px] aspect-[4/3]">
                 {carouselImages.map((img, idx) => {
-                  // Determine position relative to active index
-                  // We want 3 states:
-                  // 0: Active (Front)
-                  // 1: Next (Waiting Right)
-                  // 2: Last (Stacked Left/Behind)
-                  
-                  // Simple distance logic for 3 items
                   let positionClass = "";
                   let zIndex = 0;
 
                   if (idx === activeIndex) {
-                    // Active Item: Slides in, Center
                     positionClass = "translate-x-0 rotate-0 scale-100 opacity-100";
                     zIndex = 30;
                   } else if (idx === (activeIndex + 1) % carouselImages.length) {
-                    // Next Item: Waiting offscreen right (ready to slide in)
                     positionClass = "translate-x-[120%] rotate-6 scale-95 opacity-0";
                     zIndex = 20;
                   } else {
-                    // Last/Previous Item: Moves to back stack
                     positionClass = "-translate-x-6 -translate-y-4 -rotate-6 scale-90 opacity-80 grayscale-[0.3]";
                     zIndex = 10;
                   }
@@ -119,7 +107,7 @@ export const Solution: React.FC = () => {
              </div>
           </div>
 
-          {/* Mobile CTA - Hidden on Desktop, appears under images */}
+          {/* Mobile CTA */}
           <div className="w-full lg:hidden flex justify-center mt-4">
              <button 
                 onClick={() => document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' })}

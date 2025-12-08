@@ -12,8 +12,8 @@ export const Story: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
           
           {/* Left Column: Copy */}
-          <div className="text-left flex flex-col h-full">
-            <div className="inline-block bg-red-50 text-red-600 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide mb-6 w-fit">
+          <div className="text-left flex flex-col h-full justify-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-bold uppercase tracking-wide mb-6 w-fit">
               The Reality
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
@@ -25,14 +25,14 @@ export const Story: React.FC = () => {
           </div>
 
           {/* Right Column: Bullets */}
-          <div className="bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-12 shadow-sm flex flex-col h-full relative">
+          <div className="bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-12 shadow-sm flex flex-col h-full relative justify-center">
             <div className="absolute top-0 right-0 -mt-6 -mr-6 w-24 h-24 bg-red-50 rounded-full blur-2xl opacity-60"></div>
             
-            <ul className="space-y-6 relative z-10 my-auto">
+            <ul className="space-y-6 relative z-10">
               {t.bullets.map((bullet, idx) => (
                 <li key={idx} className="flex items-start gap-4">
-                  <XCircle className="text-red-500 shrink-0 mt-0.5" size={24} />
-                  <span className="text-slate-700 text-lg font-medium leading-snug">
+                  <XCircle className="text-red-500 shrink-0 mt-1" size={24} />
+                  <span className="text-slate-700 text-lg font-medium leading-relaxed">
                     {bullet}
                   </span>
                 </li>

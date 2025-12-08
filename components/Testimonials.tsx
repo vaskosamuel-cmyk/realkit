@@ -30,9 +30,8 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
 export const Testimonials: React.FC = () => {
   const t = CONTENT.testimonials;
   
-  // Create two sets of items for the two rows
   const row1Items = [...t.list, ...t.list, ...t.list, ...t.list]; 
-  const row2Items = [...t.list].reverse(); // Reverse content for variety
+  const row2Items = [...t.list].reverse();
   const row2ScrollItems = [...row2Items, ...row2Items, ...row2Items, ...row2Items];
 
   return (
@@ -44,18 +43,15 @@ export const Testimonials: React.FC = () => {
       </div>
       
       <div className="relative w-full space-y-6 md:space-y-8">
-        {/* Gradient masks for seamless edges */}
         <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-        {/* Row 1: Scroll Left */}
         <div className="flex w-max animate-scroll hover:pause-on-hover">
           {row1Items.map((testimonial, idx) => (
             <TestimonialCard key={`row1-${idx}`} testimonial={testimonial} />
           ))}
         </div>
 
-        {/* Row 2: Scroll Right */}
         <div className="flex w-max animate-scroll-reverse hover:pause-on-hover">
           {row2ScrollItems.map((testimonial, idx) => (
             <TestimonialCard key={`row2-${idx}`} testimonial={testimonial} />

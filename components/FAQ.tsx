@@ -21,7 +21,7 @@ export const FAQ: React.FC = () => {
                 {openIndex === index ? <ChevronUp size={20} className="text-slate-500" /> : <ChevronDown size={20} className="text-slate-500" />}
               </button>
               <div 
-                className={`px-8 text-slate-600 bg-slate-50 transition-all duration-300 ease-in-out overflow-hidden leading-relaxed ${
+                className={`px-8 text-slate-600 bg-slate-50 transition-all duration-300 ease-in-out overflow-hidden leading-relaxed text-base md:text-lg ${
                   openIndex === index ? 'max-h-48 py-6 opacity-100' : 'max-h-0 py-0 opacity-0'
                 }`}
               >

@@ -23,8 +23,6 @@ export const Contact: React.FC = () => {
         setIsSubmitting(false);
         setIsSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
-        
-        // Reset success message after 5 seconds
         setTimeout(() => setIsSubmitted(false), 5000);
     }, 1500);
   };
@@ -56,8 +54,8 @@ export const Contact: React.FC = () => {
                   <Mail size={24} className="text-slate-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-1">Email Us</h4>
-                  <p className="text-slate-600 leading-relaxed">{t.info.email}</p>
+                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-1">Email Us</h4>
+                  <p className="text-slate-600 leading-relaxed text-base md:text-lg">{t.info.email}</p>
                 </div>
               </div>
               
@@ -66,8 +64,8 @@ export const Contact: React.FC = () => {
                   <MessageSquare size={24} className="text-slate-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-1">Live Chat</h4>
-                  <p className="text-slate-600 leading-relaxed">{t.info.support}</p>
+                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-1">Live Chat</h4>
+                  <p className="text-slate-600 leading-relaxed text-base md:text-lg">{t.info.support}</p>
                 </div>
               </div>
             </div>

@@ -10,7 +10,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   const t = CONTENT.hero;
 
   return (
-    <section id="hero" className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
+    <section id="hero" className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-20 h-full w-full bg-white bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-[0.4]"></div>
       
