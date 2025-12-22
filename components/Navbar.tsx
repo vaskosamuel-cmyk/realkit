@@ -27,7 +27,6 @@ export const Navbar: React.FC = () => {
     const distance = targetPosition - start;
     
     // Constant speed calculation: 1.2 pixels per millisecond
-    // Increased from 0.5 to make it faster but still controlled.
     const speed = 1.2; 
     const calculatedDuration = Math.abs(distance) / speed;
     
@@ -74,16 +73,16 @@ export const Navbar: React.FC = () => {
           <div className="w-9 h-9 bg-slate-900 rounded-lg flex items-center justify-center shadow-lg shadow-slate-900/20 group-hover:scale-105 transition-transform">
             <span className="text-white font-bold text-xl">R</span>
           </div>
-          <span className="text-2xl font-bold text-slate-900 tracking-tight">RealKit&trade;</span>
+          <span className="text-2xl font-bold text-slate-900 tracking-tight">RealKit™</span>
         </div>
 
         {/* Desktop Nav Links (Absolute Center) */}
         <div className="hidden md:flex items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <button onClick={() => scrollToSection('story')} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+            {content.about}
+          </button>
           <button onClick={() => scrollToSection('showcase')} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
             {content.features}
-          </button>
-          <button onClick={() => scrollToSection('preview')} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
-            {content.preview}
           </button>
           <button onClick={() => scrollToSection('testimonials')} className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
             {content.reviews}
@@ -121,8 +120,8 @@ export const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white border-b border-slate-200 p-6 md:hidden shadow-xl flex flex-col gap-2 animate-in slide-in-from-top-5">
+          <button onClick={() => scrollToSection('story')} className="text-left px-4 py-3 text-lg font-medium text-slate-700 hover:bg-slate-50 rounded-xl transition-colors">{content.about}</button>
           <button onClick={() => scrollToSection('showcase')} className="text-left px-4 py-3 text-lg font-medium text-slate-700 hover:bg-slate-50 rounded-xl transition-colors">{content.features}</button>
-          <button onClick={() => scrollToSection('preview')} className="text-left px-4 py-3 text-lg font-medium text-slate-700 hover:bg-slate-50 rounded-xl transition-colors">{content.preview}</button>
           <button onClick={() => scrollToSection('testimonials')} className="text-left px-4 py-3 text-lg font-medium text-slate-700 hover:bg-slate-50 rounded-xl transition-colors">{content.reviews}</button>
           <button onClick={() => scrollToSection('pricing')} className="text-left px-4 py-3 text-lg font-medium text-slate-700 hover:bg-slate-50 rounded-xl transition-colors">{content.pricing}</button>
           <button onClick={() => scrollToSection('contact')} className="text-left px-4 py-3 text-lg font-medium text-slate-700 hover:bg-slate-50 rounded-xl transition-colors">{content.contact}</button>

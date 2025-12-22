@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { HeroImageSection } from './components/HeroImageSection';
 import { Story } from './components/Story';
 import { Solution } from './components/Solution';
 import { ProductShowcase } from './components/ProductShowcase';
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero onOpenModal={() => setIsModalOpen(true)} />
+        <HeroImageSection />
         <Story />
         <Solution />
         <ProductShowcase />

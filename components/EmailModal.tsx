@@ -43,7 +43,7 @@ export const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
       .catch((error) => {
         console.error("Form submission error:", error);
         setIsSubmitting(false);
-        alert("There was an error submitting the form. Please try again.");
+        alert("Pri odosielaní formulára sa vyskytla chyba. Skúste to prosím znova.");
       });
   };
 
@@ -71,14 +71,14 @@ export const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                  <CheckCircle2 size={32} className="text-green-600" />
                </div>
-               <h3 className="text-2xl font-bold text-slate-900 mb-2">You're in!</h3>
-               <p className="text-slate-600">Redirecting you to the offer...</p>
+               <h3 className="text-2xl font-bold text-slate-900 mb-2">Ste prihlásený!</h3>
+               <p className="text-slate-600">Presmerúvame vás k ponuke...</p>
              </div>
           ) : (
             <>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wide mb-4 md:mb-6 w-fit">
                 <Lock size={12} />
-                Exclusive Offer
+                Exkluzívna ponuka
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 md:mb-4">{t.headline}</h2>
               <p className="text-slate-600 mb-6 md:mb-8 text-base md:text-lg leading-relaxed">
@@ -110,7 +110,7 @@ export const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
                   disabled={isSubmitting}
                   className="w-full py-3 md:py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/20 flex items-center justify-center gap-2 text-base md:text-lg"
                 >
-                  {isSubmitting ? 'Processing...' : (
+                  {isSubmitting ? 'Spracovávam...' : (
                     <>
                       {t.submitButton}
                       <ArrowRight size={18} className="md:w-5 md:h-5" />
@@ -125,21 +125,21 @@ export const EmailModal: React.FC<EmailModalProps> = ({ isOpen, onClose }) => {
           )}
         </div>
 
-        {/* Right Column: Image - Hidden on mobile to fit screen */}
+        {/* Right Column: Image */}
         <div className="hidden md:block w-1/2 bg-slate-50 relative">
           <img 
             src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="EstateOS Bundle"
+            alt="RealKit™ Bundle"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent flex items-end p-8">
             <div className="text-white">
               <div className="flex -space-x-2 mb-4">
                  {[1,2,3,4].map(i => (
-                    <img key={i} src={`https://picsum.photos/40/40?random=${i}`} className="w-10 h-10 rounded-full border-2 border-white" alt="Member" />
+                    <img key={i} src={`https://picsum.photos/40/40?random=${i}`} className="w-10 h-10 rounded-full border-2 border-white" alt="Člen" />
                  ))}
               </div>
-              <p className="font-medium text-white/90">Join 2,400+ agents scaling with EstateOS.</p>
+              <p className="font-medium text-white/90">Pridajte sa k 2,400+ maklérom rastúcim s RealKitom™.</p>
             </div>
           </div>
         </div>

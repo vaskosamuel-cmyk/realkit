@@ -6,16 +6,13 @@ export const Story: React.FC = () => {
   const t = CONTENT.story;
 
   return (
-    <section className="py-16 md:py-24 bg-white relative">
+    <section id="story" className="py-16 md:py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-6">
         
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Left Column: Copy */}
-          <div className="text-left flex flex-col h-full justify-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-bold uppercase tracking-wide mb-6 w-fit">
-              The Reality
-            </div>
+          <div className="text-left flex flex-col justify-center">
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
               {t.headline}
             </h2>
@@ -43,8 +40,8 @@ export const Story: React.FC = () => {
         </div>
 
         {/* Bridge Sentence */}
-        <div className="mt-20 text-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-          <p className="text-2xl md:text-3xl font-bold text-slate-900 mb-8 max-w-3xl mx-auto tracking-tight">
+        <div className="mt-20 md:mt-24 text-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+          <p className="text-2xl md:text-3xl font-bold text-slate-900 mb-10 max-w-3xl mx-auto tracking-tight leading-tight">
             {t.bridge}
           </p>
           <div className="flex justify-center">

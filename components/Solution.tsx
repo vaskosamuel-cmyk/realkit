@@ -30,7 +30,7 @@ export const Solution: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Headline & Description Centered Top */}
-        <div className="text-center mb-16 max-w-4xl mx-auto">
+        <div className="text-center mb-16 md:mb-20 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight mb-6">
             {t.headline}
           </h2>
@@ -43,13 +43,13 @@ export const Solution: React.FC = () => {
           
           {/* Left Column: Pillars */}
           <div className="w-full lg:w-1/2">
-            <div className="space-y-8">
+            <div className="space-y-10">
               {pillars.map((pillar, idx) => {
                 const Icon = getIcon(idx);
                 return (
-                  <div key={idx} className="flex gap-5">
-                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-100 flex items-center justify-center shrink-0 shadow-sm">
-                      <Icon className="text-blue-600" size={26} />
+                  <div key={idx} className="flex gap-6">
+                    <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-sm">
+                      <Icon className="text-blue-600" size={28} />
                     </div>
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">{pillar.title}</h3>
@@ -61,10 +61,10 @@ export const Solution: React.FC = () => {
             </div>
 
             {/* Desktop CTA - Hidden on Mobile */}
-            <div className="mt-12 hidden lg:block">
+            <div className="mt-16 hidden lg:block">
               <button 
                 onClick={() => document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-lg hover:shadow-slate-900/20 text-lg"
+                className="group flex items-center gap-2 px-8 py-5 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-lg hover:shadow-slate-900/20 text-lg"
               >
                 {t.cta}
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -111,7 +111,7 @@ export const Solution: React.FC = () => {
           <div className="w-full lg:hidden flex justify-center mt-4">
              <button 
                 onClick={() => document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full group flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-lg hover:shadow-slate-900/20 text-lg"
+                className="w-full group flex items-center justify-center gap-2 px-8 py-5 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-all shadow-lg hover:shadow-slate-900/20 text-lg"
               >
                 {t.cta}
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

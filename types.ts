@@ -30,8 +30,8 @@ export interface ModuleItem {
 
 export interface AppContent {
   nav: {
+    about: string;
     features: string;
-    preview: string;
     pricing: string;
     reviews: string;
     contact: string;
@@ -134,7 +134,6 @@ export interface AppContent {
     pricing: {
       today: string;
       value: string;
-      guarantee: string;
     };
     cta: string;
     subtext: string;

@@ -49,22 +49,22 @@ export const Contact: React.FC = () => {
             </p>
 
             <div className="space-y-8">
-              <div className="flex items-start gap-5 group">
-                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shrink-0 border border-slate-100 shadow-sm group-hover:border-blue-100 transition-colors">
-                  <Mail size={24} className="text-slate-700" />
+              <div className="flex items-start gap-6 group">
+                <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shrink-0 border border-slate-100 shadow-sm group-hover:border-blue-100 transition-colors">
+                  <Mail size={28} className="text-slate-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-1">Email Us</h4>
+                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-1">Email</h4>
                   <p className="text-slate-600 leading-relaxed text-base md:text-lg">{t.info.email}</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-5 group">
-                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shrink-0 border border-slate-100 shadow-sm group-hover:border-blue-100 transition-colors">
-                  <MessageSquare size={24} className="text-slate-700" />
+              <div className="flex items-start gap-6 group">
+                <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shrink-0 border border-slate-100 shadow-sm group-hover:border-blue-100 transition-colors">
+                  <MessageSquare size={28} className="text-slate-700" />
                 </div>
                 <div>
-                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-1">Live Chat</h4>
+                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-1">Živá podpora</h4>
                   <p className="text-slate-600 leading-relaxed text-base md:text-lg">{t.info.support}</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export const Contact: React.FC = () => {
                   <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-8">
                     <CheckCircle2 size={40} className="text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Message Sent!</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Správa odoslaná!</h3>
                   <p className="text-slate-600 max-w-xs mx-auto text-lg">{t.form.successMessage}</p>
                 </div>
               ) : (
@@ -106,8 +106,8 @@ export const Contact: React.FC = () => {
                         onChange={handleChange}
                         onFocus={() => setFocusedField('name')}
                         onBlur={() => setFocusedField(null)}
-                        className="w-full pl-6 pr-6 py-4 rounded-2xl bg-slate-50 border-2 border-transparent focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-900 placeholder:text-slate-400 text-lg"
-                        placeholder="e.g. Michael Scott"
+                        className="w-full pl-6 pr-6 py-5 rounded-2xl bg-slate-50 border-2 border-transparent focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-900 placeholder:text-slate-400 text-lg"
+                        placeholder="napr. Ján Kováč"
                       />
                     </div>
                   </div>
@@ -129,8 +129,8 @@ export const Contact: React.FC = () => {
                         onChange={handleChange}
                         onFocus={() => setFocusedField('email')}
                         onBlur={() => setFocusedField(null)}
-                        className="w-full pl-6 pr-6 py-4 rounded-2xl bg-slate-50 border-2 border-transparent focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-900 placeholder:text-slate-400 text-lg"
-                        placeholder="e.g. michael@dundermifflin.com"
+                        className="w-full pl-6 pr-6 py-5 rounded-2xl bg-slate-50 border-2 border-transparent focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-900 placeholder:text-slate-400 text-lg"
+                        placeholder="napr. jan@kovac.sk"
                       />
                     </div>
                   </div>
@@ -151,22 +151,22 @@ export const Contact: React.FC = () => {
                       onChange={handleChange}
                       onFocus={() => setFocusedField('message')}
                       onBlur={() => setFocusedField(null)}
-                      className="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-transparent focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-900 placeholder:text-slate-400 resize-none text-lg"
-                      placeholder="How can we help you scale?"
+                      className="w-full px-6 py-5 rounded-2xl bg-slate-50 border-2 border-transparent focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-900 placeholder:text-slate-400 resize-none text-lg"
+                      placeholder="Ako vám môžeme pomôcť rásť?"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 hover:scale-[1.01] active:scale-[0.99] transition-all shadow-lg shadow-slate-900/20 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed mt-2 text-lg"
+                    className="w-full py-5 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 hover:scale-[1.01] active:scale-[0.99] transition-all shadow-lg shadow-slate-900/20 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed mt-4 text-xl"
                   >
                     {isSubmitting ? (
-                      "Sending Message..."
+                      "Odosielam správu..."
                     ) : (
                       <>
                         {t.form.submitButton}
-                        <Send size={20} />
+                        <Send size={24} />
                       </>
                     )}
                   </button>

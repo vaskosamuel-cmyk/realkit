@@ -1,285 +1,310 @@
 import { AppContent } from './types';
 import { Zap, Shield, Smartphone, Globe, BarChart3, Users } from 'lucide-react';
 
-export const APP_NAME = "RealKit";
+export const APP_NAME = "RealKit™";
 
 export const FEATURE_ICONS = [Zap, Shield, Smartphone, Globe, BarChart3, Users];
 
 export const CONTENT: AppContent = {
   nav: {
-    features: "Funkcie",
-    preview: "Ukážka",
-    pricing: "Cena",
+    about: "Čo je RealKit™",
+    features: "Obsah Balíka",
+    pricing: "Cenník",
     reviews: "Recenzie",
     contact: "Kontakt",
-    cta: "Získať Balík",
-    mobileCta: "Získať Prístup"
+    cta: "Získať RealKit™",
+    mobileCta: "Kúpiť Teraz"
   },
   hero: {
     trustedBadge: "Používa viac ako 2,400+ maklérov",
-    headline: "Operačný systém pre",
-    headlineGradient: "moderných maklérov.",
-    subheadline: "Prestaňte bojovať s rozhádzanými tabuľkami a zastaranými šablónami. Získajte all-in-one Notion CRM, marketingový systém a bibliu skriptov, ktoré používajú tí najlepší.",
-    ctaPrimary: "Získať okamžitý prístup",
-    ctaSecondary: "Čo je vo vnútri?",
+    headline: "Kompletný digitálny systém",
+    headlineGradient: "pre moderných realitných maklérov.",
+    subheadline: "Získajte 80+ Canva šablón, 40+ podkladov k nehnuteľnostiam, 50+ skriptov a AI pack v jednom balíku. Všetko, čo potrebujete na profesionálny marketing and predaj.",
+    ctaPrimary: "Získať celý balík teraz",
+    ctaSecondary: "Pozrieť obsah",
     valueProps: [
-      "Jednorazová platba",
-      "Doživotné aktualizácie",
-      "Okamžité stiahnutie"
+      "80+ šablón na socialné siete",
+      "50+ Komunikačných Skriptov",
+      "Doživotný prístup"
     ]
   },
   story: {
-    headline: "Prečo väčšina maklérov stagnuje na rovnakom príjme",
-    subheadline: "Neprichádzate o obchody preto, že ste leniví. Strácate ich, pretože zakaždým znovu 'vynaliezate koleso' – nový text inzerátu, nový email, nová prezentácia... zatiaľ čo top makléri používajú overené systémy každý deň.",
+    headline: "Marketing ti berie hodiny. RealKit™ ti ich vráti.",
+    subheadline: "Priemerný maklér strávi 10+ hodín týždenne tvorbou marketingu. S RealKitom™ máte všetko pripravené za pár minút.",
     bullets: [
-      "Hodiny strávené písaním popisov nehnuteľností bez výsledkov",
-      "Strach a ticho v telefóne, keď presne neviete, čo povedať ďalej",
-      "Chaotický follow-up – horúci klienti utekajú k pripravenejším maklérom",
-      "Žiadny jasný 'systém' od prvého kontaktu až po podpis zmluvy",
-      "Pocit, že neustále len hasíte problémy namiesto strategického plánovania"
+      "Nekonečné hľadanie inšpirácie na Facebook a Instagram",
+      "Amatérsky pôsobiaca grafika, ktorá znižuje vašu cenu",
+      "Stres z písania emailov a odpovedí na námietky",
+      "Chýbajúce podklady na obhliadky a Open House",
+      "Nulový systém v následnej komunikácii s klientmi"
     ],
-    bridge: "Predstavte si, že každý jeden krok máte vopred napísaný a pripravený…"
+    bridge: "RealKit™ tieto problémy neodstraňuje učením – ale hotovými riešeniami."
   },
   solution: {
-    headline: "Predstavujeme RealKit: Váš kompletný Plug-and-Play systém pre realitný úspech",
-    description: "RealKit je digitálny balík hotových skriptov, šablón, checklistov a mini-systémov vytvorený špeciálne pre realitných maklérov. Namiesto hádania, čo povedať alebo čo poslať klientovi, jednoducho otvoríte RealKit, skopírujete šablónu a idete na istotu.",
+    headline: "Všetko-v-jednom pre váš realitný úspech",
+    description: "Spojili sme najpoužívanejšie marketingové materiály, overené komunikačné postupy a silu AI do jedného balíka.",
     pillars: [
       {
-        title: "Skripty, ktoré predávajú",
-        description: "Telefónne, stretávacie a follow-up skripty, ktoré menia „len sa pozerám“ na „kde mám podpísať?“."
+        title: "80+ Canva Šablón",
+        description: "Hotové dizajny pre IG/FB posty, Stories a Reels. Plne editovateľné v bezplatnej verzii Canvy."
       },
       {
-        title: "Marketing, ktorý priťahuje",
-        description: "Hotové šablóny pre sociálne siete, emaily a reklamy – nepotrebujete byť copywriter."
+        title: "50+ Skriptov & Správ",
+        description: "Pripravené správy for nový lead, follow-up po obhliadke či žiadosti o referenciu. Copy-paste ready."
       },
       {
-        title: "Systémy, ktoré šetria čas",
-        description: "Checklisty a workflow procesy, aby ste vždy vedeli, aký je ďalší krok od náberu po predaj."
+        title: "30 Video Skriptov & AI",
+        description: "Pripravené scenáre pre Reels a TikTok + AI PROMPT PACK pre ChatGPT na bleskové texty."
       }
     ],
-    cta: "Pozrieť si obsah RealKitu"
+    cta: "Viac o RealKit™"
   },
   showcase: {
-    headline: "Váš motor pre rast biznisu",
-    subheadline: "Spojili sme štyri piliere úspešného realitného podnikania do jedného plynulého ekosystému.",
+    headline: "Čo presne nájdete v RealKite™?",
+    subheadline: "Každý prvok je navrhnutý tak, aby zvyšoval vašu profesionalitu a šetril čas.",
     modules: [
       {
-        id: "crm",
-        title: "Notion Riadiace Centrum",
-        description: "Srdce vášho biznisu. Sledujte každý lead, aktívny náber a rozpracovaný obchod v jednom vizuálnom dashboarde bez mesačných poplatkov za drahý softvér.",
-        image: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=2070&auto=format&fit=crop",
-        features: [
-          "Manažment obchodného lievika (Pipeline)",
-          "Automatické pripomienky follow-upov",
-          "Checklist pre aktívne nábery",
-          "Sledovanie provízií a obratu"
-        ]
-      },
-      {
-        id: "scripts",
-        title: "Biblia Skriptov",
-        description: "Už nikdy sa nezaseknete pri telefonovaní. Toto nie je len PDF; je to bojom overená knižnica presvedčovacích rámcov pre každú možnú námietku.",
-        image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2574&auto=format&fit=crop",
-        features: [
-          "Skripty na exspirácie a samopredajcov (FSBO)",
-          "Scenár pre 'Zníženie Ceny'",
-          "Cestovná mapa náberovej prezentácie",
-          "Dialógy na získavanie referencií"
-        ]
-      },
-      {
         id: "marketing",
-        title: "Marketingová Sada",
-        description: "Vyzerať ako luxusná kancelária môžete od prvého dňa. Dizajny s vysokou konverziou, ktoré vás postavia do pozície autority na trhu.",
-        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
+        title: "📱 80+ šablón na socialné siete",
+        description: "Vaše sociálne siete budú vyzerať ako od agentúry. Plne editovateľné v Canve.",
+        image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2000&auto=format&fit=crop", // Elegant UI/Social media
         features: [
-          "Luxusná Naberacia Prezentácia (Canva)",
-          "Hárky pre Obhliadky (Open House)",
-          "Letáky Práve Naberané / Predané",
-          "Šablóny pre Instagram Stories"
+          "IG / FB posty & Stories",
+          "Reels cover obrázky",
+          "Edukačné Carousel posty",
+          "Tipy, procesy a referencie"
         ]
       },
       {
         id: "systems",
-        title: "Rastové Systémy",
-        description: "Prestaňte vymýšľať koleso. Zapojte sa do overených pracovných postupov, ktoré automaticky 'zohrievajú' vašich klientov.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+        title: "🏡 40+ podkladov k nehnuteľnostiam",
+        description: "Všetko, čo potrebuješ na profesionálnu prezentáciu nehnuteľnosti.",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop", // Modern House Exterior
         features: [
-          "365-dňový Kalendár Obsahu",
-          "Sady Emailových Sekvencií",
-          "Dotazník pred náberom",
-          "Databáza dodávateľov a partnerov"
+          "Property info sheet (A4)",
+          "Open house pozvánka",
+          "Letáčik k nehnuteľnosti",
+          "Inzerát – textová kostra"
+        ]
+      },
+      {
+        id: "scripts",
+        title: "💬 50+ Komunikačné skripty",
+        description: "Zvládnite každú konverzáciu. Pripravené pre Email, SMS aj DM.",
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop", // Professional work environment
+        features: [
+          "Nový lead & po obhliadke",
+          "Oživenie studených leadov",
+          "Žiadosť o referenciu",
+          "Odpovede na námietky"
+        ]
+      },
+      {
+        id: "crm",
+        title: "🎥 30 Video Skriptov & AI",
+        description: "Odlíšte sa cez video a využite silu AI asistenta vo svoj prospech.",
+        image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=2000&auto=format&fit=crop", // Person with smartphone/video
+        features: [
+          "Scenáre pre Reels / TikTok",
+          "AI popisy nehnuteľností",
+          "AI odpovede na námietky",
+          "AI prompt pack pre ChatGPT"
         ]
       }
     ]
   },
   whoIsFor: {
-    headline: "Pre koho je RealKit (a pre koho nie)",
+    headline: "Pre koho je RealKit™ určený?",
     perfectFor: {
-      title: "Ideálne pre vás, ak...",
+      title: "Ušetrí vám hodiny stresu, ak...",
       items: [
-        "Ste nový alebo rastúci maklér, ktorý chce mať vo veciach poriadok.",
-        "Už vás nebaví hádať, čo povedať do telefónu a v správach.",
-        "Chcete ušetriť čas hotovými šablónami namiesto písania od nuly."
+        "Chcete profesionálny vizuál bez drahej agentúry.",
+        "Potrebujete mať texty a skripty vždy po ruke.",
+        "Hľadáte moderný spôsob, ako zaujať nových klientov."
       ]
     },
     notFor: {
-      title: "Nie je pre vás, ak...",
+      title: "RealKit™ nie je pre vás, ak...",
       items: [
-        "Hľadáte 'magické tlačidlo', ktoré zarobí peniaze bez práce.",
-        "Máte už dokonale zdokumentovaný systém, ktorý funguje.",
-        "Odmietate používať akékoľvek skripty alebo šablóny."
+        "Máte vlastného full-time grafika and marketéra.",
+        "Neveríte v silu sociálnych sietí pri predaji.",
+        "Nechcete skúšať nové, efektívnejšie postupy."
       ]
     }
   },
   features: {
-    headline: "Všetko potrebné pre škálovanie",
-    subheadline: "Žiadna vata. Len nástroje, ktoré reálne posúvajú váš realitný biznis vpred.",
+    headline: "Navrhnuté pre rýchlosť",
+    subheadline: "Žiadne zložité návody. Všetko je pripravené na okamžité použitie.",
     items: [
       {
-        title: "Okamžité nastavenie",
-        description: "Duplikujte si Notion pracovnú plochu a začnite fungovať do 5 minút."
+        title: "Editácia v Canve",
+        description: "Stačí prekliknúť fotky and texty. Zvládne to úplne každý."
       },
       {
-        title: "Optimalizované pre mobil",
-        description: "Pristupujte k svojim skriptom a CRM priamo z mobilu, aj keď ste v teréne."
+        title: "Copy-Paste Ready",
+        description: "Skripty sú pripravené tak, aby ste ich len skopírovali."
       },
       {
-        title: "Doživotné aktualizácie",
-        description: "Zaplatíte raz a každú budúcu aktualizáciu a novú šablónu máte zadarmo."
+        title: "Moderná Estetika",
+        description: "Čistý a prevádzkový dizajn, ktorý buduje dôveru u klientov."
       },
       {
-        title: "Žiadne mesačné poplatky",
-        description: "Prestaňte platiť stovky eur mesačne za zložitý softvér, ktorý nevyužívate."
+        title: "Bez Mesačných Platieb",
+        description: "Platíte raz, balík a všetky aktualizácie sú vaše navždy."
       },
       {
-        title: "Súkromie dát",
-        description: "Vaše dáta žijú vo vašom Notion účte. My vaše kontakty nikdy nevidíme."
+        title: "Slovenský Jazyk",
+        description: "Všetky materiály sú v slovenčine a pre náš trh."
       }
     ],
     aiBox: {
-      title: "Pripravené na AI",
-      description: "Postavené tak, aby sa dalo ľahko integrovať s najnovšími AI nástrojmi pre maklérov.",
-      link: "Viac o AI integrácii"
+      title: "AI Integrácia",
+      description: "Náš prompt pack urobí z ChatGPT vášho copywritera na plný úväzok.",
+      link: "Viac o AI packu"
     }
   },
   testimonials: {
-    headline: "Skutoční makléri. Skutočné výsledky.",
+    headline: "Recenzie našich zákazníkov",
     list: [
       {
         id: 1,
-        name: "Jana Kováčová",
-        role: "Top Maklérka, Bratislava",
-        image: "https://picsum.photos/100/100?random=1",
-        text: "Topila som sa v neorganizovaných excel tabuľkách. RealKit kompletne zefektívnil môj biznis. Len vďaka systému follow-upov som minulý mesiac uzavrela o 3 obchody viac.",
+        name: "Marek T.",
+        role: "Realitný Maklér",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+        text: "Konečne mám v marketingu poriadok. Tie Canva šablóny sú perfektné a skripty na follow-up mi reálne pomohli uzavrieť dva nábory za mesiac.",
         rating: 5
       },
       {
         id: 2,
-        name: "Marek Tóth",
-        role: "Majiteľ RK",
-        image: "https://picsum.photos/100/100?random=2",
-        text: "Len tie naberacie šablóny majú hodnotu celého balíka. Vyzerajú profesionálnejšie než to, čo poskytuje naša sieť. Klienti sú nadšení.",
+        name: "Andrea V.",
+        role: "Luxury Broker",
+        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
+        text: "RealKit™ mi ušetril toľko času, že som sa mohla venovať obhliadkam namiesto grafiky. Investícia sa mi vrátila hneď pri prvom predaji.",
         rating: 5
       },
       {
         id: 3,
-        name: "Elena R.",
-        role: "Realitná Maklérka",
-        image: "https://picsum.photos/100/100?random=3",
-        text: "Jednoduché, čisté a efektívne. Nechcela som zložitý softvér s mesačným poplatkom. Táto jednorazová investícia bola to najlepšie rozhodnutie roka.",
+        name: "Juraj L.",
+        role: "Majiteľ RK",
+        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop",
+        text: "Skvelé spracovanie. AI prompty sú totálny game-changer pri písaní inzerátov. Už žiadne trápenie sa nad prázdnou stranou.",
+        rating: 5
+      },
+      {
+        id: 4,
+        name: "Lucia K.",
+        role: "Rezidenčný maklér",
+        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop",
+        text: "Konečne môj Instagram nevyzerá ako nástenka z 90. rokov. Klienti mi sami píšu, že sa im páči môj profesionálny vizuál.",
+        rating: 5
+      },
+      {
+        id: 5,
+        name: "Peter M.",
+        role: "Realitný poradca",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop",
+        text: "Tie skripty na námietky sú top. Pomohli mi v situáciách, kde som predtým nevedel, čo rýchlo odpovedať. Odporúčam každému.",
+        rating: 5
+      },
+      {
+        id: 6,
+        name: "Zuzana S.",
+        role: "Independent Agent",
+        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop",
+        text: "Balík je prehľadný a okamžite použiteľný. Pre makléra, ktorý je v teréne od rána do večera, je to obrovské uľahčenie života.",
+        rating: 5
+      },
+      {
+        id: 7,
+        name: "Michal R.",
+        role: "Hypotekárny & Realitný špecialista",
+        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop",
+        text: "Hľadal som spôsob, ako zjednotiť svoj brand. RealKit™ mi dal všetko na striebornom podnose. Pomer cena/výkon je bezkonkurenčný.",
         rating: 5
       }
     ]
   },
   pricing: {
-    headline: "Získajte nefér výhodu ešte dnes.",
-    subheadline: "Pridajte sa k stovkám maklérov, ktorí škálujú svoj biznis s RealKitom.",
-    listHeader: "Čo všetko je v balíku:",
+    headline: "Získajte kompletný RealKit™ balík ešte dnes.",
+    subheadline: "Všetky šablóny, skripty a systémy v jednom balíku za cenu, teraz za zvýhodnenú cenu",
+    listHeader: "V balíku RealKit™ získate:",
     items: [
-      { name: "RealKit Notion CRM Systém", value: 497 },
-      { name: "Ultimátna Biblia Skriptov (50+)", value: 197 },
-      { name: "Šablóna Luxusnej Naberacej Prezentácie", value: 147 },
-      { name: "365-dňový Kalendár Obsahu", value: 97 },
-      { name: "Sada Emailových Sekvencií", value: 197 },
-      { name: "Bonus: Sprievodca pre Kupujúcich", value: 97 },
-      { name: "Kartičky na Zvládanie Námietok", value: 47 },
-      { name: "Hárky pre Obhliadky (Open House)", value: 27 },
+      { name: "📱 80+ šablón na socialné siete", value: 147 },
+      { name: "🏡 40+ podkladov k nehnuteľnostiam", value: 97 },
+      { name: "💬 50+ Komunikačné skripty", value: 87 },
+      { name: "🎥 30 Video skriptov & AI Pack", value: 67 },
+      { name: "📊 Lead & Follow-up Tracker", value: 47 },
+      { name: "📘 2× Praktické Mini eBooky", value: 27 }
     ],
     mainFeatures: [
-      "Kompletný Notion CRM Dashboard",
-      "50+ Bojom overených Skriptov",
-      "Luxusná Marketingová Sada",
-      "Automatizované Emailové Toky"
+      "80+ Canva dizajnov",
+      "50+ Skriptov a správ",
+      "30 Video scenárov",
+      "AI Prompt Pack"
     ],
     bonuses: [
-      { title: "Sprievodca pre Kupujúcich", value: "97€" },
-      { title: "Kartičky na Námietky", value: "47€" },
-      { title: "Hárky na Obhliadky", value: "27€" }
+      { title: "50 Call-to-Action textov", value: "27€" },
+      { title: "30-dňový Content plán", value: "47€" },
+      { title: "Google Sheet Tracker", value: "67€" }
     ],
     totalValue: "Celková Hodnota",
-    offerLabel: "Limitovaná Ponuka",
-    urgency: "Cena onedlho stúpne",
-    secureLabel: "Bezpečná SSL Platba",
-    cta: "Získať Prístup Teraz",
-    subtext: "Jednorazová platba. Doživotný prístup."
+    offerLabel: "Launch Ponuka -90%",
+    urgency: "Limitovaná ponuka za",
+    secureLabel: "Bezpečný nákup",
+    cta: "Získať prístup k RealKit™",
+    subtext: "Jednorazová platba. Doživotný prístup k balíku."
   },
   faq: {
-    headline: "Časté Otázky",
+    headline: "Čo vás zaujíma",
     items: [
       {
-        question: "Musím platiť mesačné poplatky?",
-        answer: "Nikdy. RealKit je jednorazová investícia. Všetky šablóny, systémy a budúce aktualizácie vlastníte navždy."
+        question: "Ako presne fungujú Canva šablóny?",
+        answer: "Po nákupe získate špeciálny odkaz. Ten otvoríte v Canve a šablóny sa skopírujú do vášho účtu. Potom už len meníte fotky a texty podľa potreby."
       },
       {
-        question: "Funguje to aj na mobile?",
-        answer: "Áno! Keďže jadro systému je postavené na platformách Notion a Canva, k svojmu CRM a šablónam máte prístup z akéhokoľvek zariadenia, kdekoľvek."
+        question: "Dostanem k nákupu faktúru?",
+        answer: "Áno, po úspešnej platbe vám automaticky zašleme faktúru, ktorú si môžete uplatniť v účtovníctve."
       },
       {
-        question: "Som začínajúci maklér. Je to pre mňa?",
-        answer: "Absolútne. Toto je 'biznis v krabici', ktorý si väčšina nováčikov želá mať na začiatku. Nastaví vám profesionálne systémy od prvého dňa."
-      },
-      {
-        question: "Ako získam prístup?",
-        answer: "Okamžite po zakúpení obdržíte email s bezpečným odkazom na duplikovanie pracovnej plochy a stiahnutie všetkých materiálov."
+        question: "Sú skripty vhodné aj pre začínajúcich maklérov?",
+        answer: "Určite. Sú postavené na psychológii predaja tak, aby vám pomohli pôsobiť profesionálne a sebavedomo od prvého dňa."
       }
     ]
   },
   contact: {
-    headline: "Kontaktujte Nás",
-    subheadline: "Máte otázky o balíku? Potrebujete pomôcť so stiahnutím? Sme tu pre vás.",
+    headline: "Sme tu pre vás",
+    subheadline: "Máte otázky pred nákupom alebo potrebujete technickú pomoc?",
     form: {
-      nameLabel: "Vaše Meno",
-      emailLabel: "Emailová Adresa",
-      messageLabel: "Správa",
-      submitButton: "Odoslať Správu",
-      successMessage: "Vďaka za správu! Čoskoro sa vám ozveme."
+      nameLabel: "Meno",
+      emailLabel: "Váš E-mail",
+      messageLabel: "Vaša správa",
+      submitButton: "Odoslať",
+      successMessage: "Vďaka! Ozveme sa vám do 24 hodín."
     },
     info: {
-      email: "podpora@realkit.sk",
-      support: "24/7 Podpora cez Email"
+      email: "ahoj@realkit.sk",
+      support: "Rýchla podpora 7 dní v týždni"
     }
   },
   finalCta: {
-    headline: "Pripravení nainštalovať overený systém do vášho biznisu?",
-    subheadline: "Môžete ďalej hádať, čo povedať a čo poslať… alebo môžete zapojiť RealKit a začať používať skripty a systémy, ktoré sú pripravené ešte dnes.",
+    headline: "Váš profesionálny marketing začína tu",
+    subheadline: "Nestrácajte čas vecami, ktoré sme už urobili za vás. Aktivujte si RealKit™ a sústreďte sa na predaj.",
     pricing: {
-      today: "Dnes: 97€ (jednorazovo)",
-      value: "Hodnota: 1,300€+",
-      guarantee: "30-dňová garancia vrátenia peňazí"
+      today: "Špeciálna cena: 39€",
+      value: "Skutočná hodnota: 510€+",
     },
-    cta: "Získať Okamžitý Prístup k RealKitu",
-    subtext: "Ste jedno rozhodnutie od predvídateľnejšieho realitného biznisu."
+    cta: "Získať prístup k RealKit™",
+    subtext: "Pridajte sa k maklérom, ktorí už používajú moderné nástroje."
   },
   modal: {
-    headline: "Odomknite Špeciálnu Ponuku 49€",
-    subheadline: "Pre prístup k RealKitu za špeciálnu cenu 49€ zadajte prosím vašu emailovú adresu nižšie.",
-    emailPlaceholder: "Zadajte váš email",
-    submitButton: "Získať Prístup",
-    disclaimer: "Rešpektujeme vaše súkromie. Odhlásiť sa môžete kedykoľvek."
+    headline: "Získajte prístup k RealKitu™ za 39 €",
+    subheadline: "Zadajte e-mail a ihneď vás presmerujeme k dokončeniu objednávky.",
+    emailPlaceholder: "Zadaj e-mail",
+    submitButton: "Pokračovať k objednávke",
+    disclaimer: "Vaše súkromie je u nás prioritou."
   },
   footer: {
     rights: "Všetky práva vyhradené.",
-    links: ["Ochrana Súkromia", "Podmienky Používania"]
+    links: ["Ochrana súkromia", "Podmienky používania"]
   }
 };

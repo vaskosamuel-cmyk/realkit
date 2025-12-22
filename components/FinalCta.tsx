@@ -1,6 +1,6 @@
 import React from 'react';
 import { CONTENT } from '../constants';
-import { ArrowRight, Check, ShieldCheck, Tag } from 'lucide-react';
+import { ArrowRight, Check, Tag } from 'lucide-react';
 
 interface FinalCtaProps {
   onOpenModal: () => void;
@@ -35,11 +35,6 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenModal }) => {
           <div className="flex items-center gap-2">
             <Check size={18} className="text-blue-200" />
             <span className="text-blue-100">{t.pricing.value}</span>
-          </div>
-          <div className="hidden md:block w-px h-6 bg-blue-500/40"></div>
-          <div className="flex items-center gap-2">
-            <ShieldCheck size={18} className="text-blue-200" />
-            <span className="text-blue-100">{t.pricing.guarantee}</span>
           </div>
         </div>
 
